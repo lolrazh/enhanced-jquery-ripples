@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Effect Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="background"></div>
+
+    <!-- Load scripts at the end of body -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jquery.ripples.js"></script>
+    <script>
+        $(document).ready(function() {
+            const baseRadius = 37;
+            let time = 0;
+            
+            try {
+                const $ripples = $('#background').ripples({
+                    resolution: 512,
+                    dropRadius: baseRadius,
+                    perturbance: 0.12,
+                    interactive: true
+                });
+
+                function handleRipple(e) {
+                    const $el = $(this);
+                    const x = e.pageX - $el.offset().left;
+                    const y = e.pageY - $el.offset().top;
+                    
+                    time += 0.05;
+                    const currentRadius = baseRadius * 0.5 + Math.sin(time * 4) * 10;
+                    const strength = e.type === 'mousedown' ? 0.7 : 0.3;
+                    
+                    $el.ripples('drop', x, y, currentRadius, strength);
+                }
+
+                $('#background')
+                    .on('mousemove', handleRipple)
+                    .on('mousedown', handleRipple);
+
+            } catch (error) {
+                console.error('Error:', error);
+                if (error.message?.includes('WebGL')) {
+                    console.error('WebGL not supported or encountered an error');
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
