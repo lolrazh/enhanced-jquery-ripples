@@ -25,20 +25,32 @@ The jQuery Ripples Plugin enhances the visual aesthetics of websites by simulati
 
 ### **New Enhancements:**
 ✅ **Advanced Screen Space Reflections (SSR)** - Ripples now reflect underlying content more realistically.
+
 ✅ **Physically-Based Specular Highlights** - Added GGX microfacet BRDF for sharper and more physically accurate reflections.
+
 ✅ **Dynamic Light Direction** - Light sources are now adjustable, providing more immersive shading effects.
+
 ✅ **Improved Mouse Interaction** - Ripples dynamically respond to cursor movement and pressure.
+
 ✅ **Enhanced Iridescent Film Effect** - Subtle chromatic shifts add realism to thin-film interference.
+
 ✅ **Optimized Noise and Grain** - Introduced procedural noise functions to simulate water texture irregularities.
+
 ✅ **Smoother Surface Normals** - Normal calculations now use multiple samples for more fluid reflections.
+
 ✅ **Refined Edge Detection** - Prevents unnatural distortion at ripple boundaries.
+
 ✅ **Performance Optimizations** - Optimized framebuffer switching and shader computations for smoother animations.
 
 ### **Core Features (Retained from Original Plugin):**
 ✅ **Pure WebGL Implementation** - No dependencies on Canvas 2D rendering.
+
 ✅ **Interactive Mouse & Touch Effects** - Create ripples on click, hover, or touch.
+
 ✅ **Auto Rain Mode** - Generates random water drops dynamically.
+
 ✅ **Customizable Water Physics** - Configure drop radius, perturbance, and more.
+
 ✅ **Supports Background Images** - Works seamlessly over images and background textures.
 
 ## Installation
