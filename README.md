@@ -2,6 +2,8 @@
 
 A modernized and improved version of the original [jQuery Ripples Plugin](https://github.com/sirxemic/jquery.ripples) by [Sirxemic](https://sirxemic.com/). This project brings realistic, interactive water ripple effects to any element using WebGL, while incorporating advanced shader techniques and performance optimizations. 
 
+![](cover.png)
+
 Inspired by the amazing [gentlerain.ai](https://gentlerain.ai) site.
 
 ## Table of Contents
