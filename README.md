@@ -1,4 +1,4 @@
-# jQuery Ripples - Enhanced Edition 🌊✨
+# Enhanced jQuery Ripples 🌊✨
 
 A massively improved, visually stunning WebGL-powered water ripple effect for jQuery, pushing the boundaries of real-time shader magic. Originally based on [sirxemic's jQuery Ripples](https://github.com/sirxemic/jquery.ripples), this version takes things to a whole new level with:
 
